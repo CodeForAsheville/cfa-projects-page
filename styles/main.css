@@ -1,0 +1,667 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+body, html{
+    margin: 0;
+}
+
+thead {display: table-header-group; position: relative;}
+tfoot {display: table-header-group; position: relative;}
+
+a{
+    color: #005b80;
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: Raleway;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+body, p, td, th {
+    /* Trying Raleway throughout */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Let's define headers */
+h1{
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 1.2em;
+}
+
+
+h3{
+    font-size: 1em;
+}
+
+h4{
+    font-size: .8em;
+}
+/* Let's define headers */
+
+.page {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    clear: both;
+    /*height: 100%;*/
+    max-width: 1000px;
+}
+
+.wrapper {
+	min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.button{
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    max-width: 300px;
+}
+
+.spinner{
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.actions a{
+    border: 2px solid white;
+    padding: .5em;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 120px;
+    text-align: center;
+}
+
+@media(max-width: 720px){
+    .button{
+        width: 90%;
+        display: block;
+        margin-top: 10px;
+    }
+    .mobile-hidden{
+        display: none;
+    }
+}
+
+@media(min-width: 721px){
+    .desktop-hidden{
+        display: none !important;
+    }
+}
+
+.show-voter-info{
+    margin-top: 10px;
+    text-align: left;
+    cursor: pointer;
+    color: #005b80;
+}
+
+.ui-description{
+    padding: 10px;
+    font-size: .8em;
+    color: #666;
+    border: 1px solid #ccc;
+    margin: 20px 0px;
+}
+
+.button span{
+    font-size: .8em;
+    vertical-align: middle;
+}
+
+.button.blue{
+    background: #005b80;
+}
+
+.button.blue:hover{
+    background: #01364c;
+}
+
+.button.green{
+    background: #1a730c;
+}
+
+.button.green:hover{
+    background: #114a08;
+}
+
+.ballot-container {
+
+}
+
+.ballot-section {
+
+}
+
+.ballot-section-info {
+    font-size: .8em;
+    color: #666;
+}
+
+.ballot-section-options li {
+    -webkit-transition: all .2s; /* Safari */
+    transition: all .2s;
+}
+
+.candidate-party{
+    text-transform: uppercase;
+}
+
+.candidate-website{
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.ballot-section-options li input{
+    width: 100%;
+    min-height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*PARTY AFFILIATIONS*/
+.ballot-section-options ul{
+    padding-left: 0px;
+}
+
+.ballot-section-options li.selected,
+.ballot-section-options li.selected *{
+    color: white !important;
+}
+
+/*REPUBLICAN*/
+.ballot-section-options li.republican{
+    border: 2px solid #ff4000;
+    color: #ff4000;
+}
+
+.ballot-section-options li.republican .actions a{
+    background: #ff4000;
+}
+
+.ballot-section-options li.republican .actions a:hover{
+    background: #ab2c02;
+}
+
+.ballot-section-options li.republican.selected{
+    background: #ff4000;
+}
+
+/*DEMOCRAT*/
+.ballot-section-options li.democrat{
+    border: 2px solid #0051bf;
+    color: #0051bf;
+}
+
+.ballot-section-options li.democrat .actions a{
+    background: #0051bf;
+}
+
+.ballot-section-options li.democrat .actions a:hover{
+    background: #023273;
+}
+
+.ballot-section-options li.democrat.selected{
+    background: #0051bf;
+}
+
+/*LIBERTARIAN*/
+.ballot-section-options li.libertarian .actions a{
+    background: #e9b600;
+}
+
+.ballot-section-options li.libertarian{
+    border: 2px solid #e9b600;
+    color: #e9b600;
+}
+
+.ballot-section-options li.libertarian.selected{
+    background: #e9b600;
+}
+
+/*UNAFFILIATED*/
+.ballot-section-options li.unaffiliated{
+    border: 2px solid #9c865c;
+    color: #9c865c;
+}
+
+.ballot-section-options li.unaffiliated .actions a{
+    background: #9c865c;
+}
+
+.ballot-section-options li.unaffiliated.selected{
+    background: #9c865c;
+}
+
+.ballot-section-options li.referendum{
+    border: 2px solid #666;
+    color: #666;
+}
+
+.ballot-section-options li.referendum .actions a{
+    background: #666;
+}
+
+.ballot-section-options li.referendum.selected{
+    background: #666;
+}
+
+.ballot-section-options li.write-in{
+    border: 2px solid #666;
+    color: #666;
+}
+
+.ballot-section-options li.write-in.selected{
+    background: #666;
+}
+/*END PARTY AFFILIATIONS*/
+
+h3.candidate-name {
+	width: 100%;
+}
+
+.candidate {
+	display: inline-block;
+	position: relative;
+}
+
+.candidate-info{
+    display:none;
+}
+
+.candidate-website{
+    display:none;
+}
+
+.candidate-info-container {
+	width: 100%;
+    text-align: center;
+    clear:both;
+}
+
+.candidate-info-container p {
+	text-align: left;
+}
+
+.candidate-info-learnmore {
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.candidate-info-learnmore a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	font-size: .8em;
+	width: auto !important;
+    height: auto !important;
+    background: rgba(0,0,0,0.1) !important;
+    padding: .5em !important;
+    text-shadow: none !important;
+    text-decoration: none !important;
+    display:block;
+    border-radius: 3px;
+    color: #666;
+}
+
+@media(max-width: 720px){
+    .candidate-info a{
+        width: 100%;
+        margin-top: 5px;
+        display: block;
+    }
+    .candidate-website a{
+        width: 100%;
+        margin-top: 5px;
+        display: block;
+    }
+}
+
+.candidate-info p{
+    text-align: center;
+}
+
+.candidate-info a{
+    margin-right: 20px;
+}
+
+.candidate-website p{
+    text-align: center;
+}
+
+.candidate-website a{
+    margin-right: 20px;
+}
+
+
+.candidate-info-learnmore:after {
+	/*content: "\2304" !important;*/
+    /*display: block;*/
+    /*font-size: 2em;*/
+    /*line-height: .5em;*/
+}
+
+.ballot-section{
+    margin-top: 30px;
+}
+
+
+.ballot-section-options>ul>li {
+	list-style: none;
+	/*background: #666;*/
+	padding: .2em;
+	margin: .5em auto;
+	border-radius: .2em;
+}
+
+.ballot-section-options>ul>li .actions{
+    float:right;
+}
+
+li.democrat {
+
+}
+
+li.libertarian {
+
+}
+
+li.unaffiliated {
+
+}
+/* PRC Adding styles for Step2 */
+.step1, .step2{
+    /*transition: all .2s;*/
+}
+
+.step2{
+    padding: 10px 50px;
+    max-width: 90%;
+}
+
+@media(max-width: 720px){
+    .step2{
+        padding: 20px 0px;
+        margin: auto;
+    }
+    h1{
+        font-size: 16px;
+    }
+}
+
+.back-to-step1{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+/*    cursor: pointer;
+    text-decoration: underline;*/
+    /*color: blue;*/
+}
+/* PRC Adding styles for Step1 */
+.wrapper{
+
+}
+
+.step1{
+    display: none;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+}
+
+.step1 img{
+    max-width: 100%;
+}
+
+.step1 #enter-name{
+    display: block;
+    /*width: 40%;*/
+    margin: 20px auto;
+    font-size: 1.5em;
+    width: 200px;
+}
+
+.step1 #results, .step1 #single-voter-detail{
+    text-align: left;
+}
+
+.voter-row{
+    color: #005b80;
+}
+
+.voter-info-key{
+    font-weight: bold;
+    font-size: .8em;
+    width: 200px;
+    display: inline-block;
+}
+
+.voter-info-value{
+    font-size: .8em;
+}
+
+@media(max-width: 720px){
+    .voter-info-key,
+    .voter-info-value{
+        clear: both;
+        display: block;
+    }
+}
+
+.step1{
+
+}
+
+.step1 form{
+    background: #eee;
+    /*width: 50%;*/
+    margin: auto;
+    padding: 20px 50px;
+    border-radius: 5px;
+}
+
+@media(max-width: 720px){
+    .step1 form{
+        padding: 20px;
+    }
+}
+
+.step1 form h1, h2{
+    margin-bottom: 10px;
+}
+
+.step1 #single-voter-detail{
+    /*display: none;*/
+}
+
+form input[type="text"]{
+    min-height: 60px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+form input[type="submit"]{
+    padding: 10px;
+    border: none;
+    text-transform: uppercase;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover{
+    background: blue;
+}
+/* End PRC */
+table{
+    border-collapse: collapse;
+}
+
+td{
+    padding: 2px;
+}
+
+/*PRINT*/
+
+.print-content{
+    display: none;
+}
+
+.print-content td{
+    font-size: .8em;
+    border-bottom: 1px solid #ccc;
+}
+
+.print-content thead{
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+}
+
+.share-and-print{
+    z-index: 1000;
+    display: none;
+    text-align: center;
+    width: 100% !important;
+    left: 0 !important;
+    top: 0;
+}
+
+.print-button a{
+    width: 100%;
+    max-width: none;
+    padding: 15px 0px;
+}
+
+.print-button{
+    display: block;
+}
+
+.print-button,.share-button-container{
+    /*display: inline-block;*/
+    margin: 0px !important;
+}
+
+.print-button a,.share-button-container a{
+    border-radius: 0 !important;
+    /*font-size: 12px;*/
+    margin: 0px !important;
+    /*padding: 5px;*/
+}
+
+@media print {
+    .step1{
+        display: none;
+    }
+    .ballot-container{
+        display: inline-block;
+        float: left;
+        width: 30%;
+        margin-right: 3.33%;
+    }
+    .ballot-section{
+        clear: both;
+        display: block;
+        overflow: hidden;
+    }
+    .ballot-section-options ul{
+        display: block;
+        clear: both;
+    }
+    .ballot-section h2{
+        display: inline-block;
+        float: left;
+    }
+   .ballot-section-options li{
+        display: none;
+        border: none !important;
+        padding: 5px !important;
+        margin: 5px !important;
+   }
+   .ballot-section-options li.selected{
+        display: inline;
+        float: left;
+   }
+   .candidate-info-learnmore{
+        display: none;
+   }
+   .actions{
+        display: none;
+   }
+   h1, h2, h3, h4, h5, h6{
+        font-size: 1em;
+        margin-bottom: 5px;
+        margin: 0px !important;
+   }
+   .wrapper, footer, .share-button-container{
+    display: none;
+   }
+   .print-content{
+    display: block;
+   }
+   .print-button{
+    display: none;
+   }
+    .share-and-print{
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.election-description-link-list{
+    overflow: hidden;
+
+}
+.election-description-link-list li{
+    display: list-item;
+    float: left;
+}
+
+footer{
+    padding: 30px;
+    margin-top: 20px;
+    text-align: center;
+    background: #eee;
+}
+
+
+.sample-ballot-button-container{
+    margin-top: 10px;
+    display: none;
+}
+
+.show-voter-info{
+    display: none;
+}
